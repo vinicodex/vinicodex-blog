@@ -86,7 +86,7 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS = ["vinicodex.pythonanywhere.com"]
+ALLOWED_HOSTS = ["vinicodex.pythonanywhere.com", "127.0.0.1:8000", "127.0.0.1"]
 
 
 # Password validation
