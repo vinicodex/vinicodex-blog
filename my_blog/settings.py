@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+SITE_ID = 1
 
 # Application definition
 
@@ -39,6 +40,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'blog.apps.BlogConfig',
     'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+    'django.contrib.postgres',
 ]
 
 MIDDLEWARE = [
@@ -81,6 +85,14 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
+
+DATABASES = {
+        'default': {
+        'ENGINE': 'django.db.backends.postgresql', 'NAME': 'blog',
+        'USER': 'blog',
+        'PASSWORD': 'admin',
+                }
+        }
 
 
 # Password validation
