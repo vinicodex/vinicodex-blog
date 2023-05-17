@@ -23,9 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-ssu5y#(8yuln$hq0mtcxclb4(4(s@n&euv*tdcz_3f96o*6o6f"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = False
 
 SITE_ID = 1
 
@@ -86,7 +84,9 @@ DATABASES = {
     }
 }
 
-ALLOWED_HOSTS = ["vinicodex.pythonanywhere.com", "127.0.0.1:8000", "127.0.0.1"]
+
+
+ALLOWED_HOSTS = ["www.vinicodex.com", "127.0.0.1:8000", "127.0.0.1"]
 
 
 # Password validation
