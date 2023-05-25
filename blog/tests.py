@@ -1,3 +1,16 @@
-from django.test import TestCase
+import pytest
+from django.test import Client
+from django.urls import reverse
 
-# Create your tests here.
+
+@pytest.mark.django_db
+class TestIndexViews:
+    client = Client()
+
+    def test_index_rendering(self):
+        url = reverse('blog:index')
+        response = self.client.get(url)
+        assert response.status_code == 200
+        assert "vini-codex" in response.content.decode("utf-8")
+
+
