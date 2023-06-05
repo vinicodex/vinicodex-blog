@@ -8,7 +8,7 @@ from taggit.models import Tag
 from django.db.models import Count
 
 
-def post_list(request, tag_slug=None):
+def index(request, tag_slug=None):
     post_list_query = Post.published.all()
     tag = None
     if tag_slug:
@@ -22,7 +22,7 @@ def post_list(request, tag_slug=None):
         posts = paginator.page(1)
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
-    return render(request,'blog/post/list.html',{'posts': posts, 'tag': tag})
+    return render(request, 'blog/post/index.html', {'posts': posts, 'tag': tag})
 
 
 def post_detail(request, year, month, day, post):
