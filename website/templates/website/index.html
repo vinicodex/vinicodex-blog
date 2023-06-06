@@ -1,5 +1,4 @@
-{% extends "blog/post/../base.html" %}
-{% load blog_tags %}
+{% extends "website/post/../base.html" %}
 
 {% block title %}My Blog{% endblock %}
 
@@ -13,9 +12,9 @@
           <h1>Marcos Vinicius</h1>
         </div>
         <ul>
-          <li><a class="active" href="/">Home</a></li>
-          <li><a href="./projects/">Projects</a></li>
-          <li><a href="./contact/">Contact</a></li>
+          <li><a class="active" href="/website/static">Home</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -250,24 +249,4 @@
         <img class="splash" src="./img/splash.svg" alt="" />
       </div>
     </section>
-    <footer>
-      <h4>vinicodex &copy; 2018</h4>
-      <ul>
-        <li>
-          <a href="#"
-            ><img src="{% static 'icons/twitter 1.svg' %}" alt="twitter-social"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="{% static 'icons/instagram 1.svg' %}" alt="instagram-social"
-          /></a>
-        </li>
-        <li>
-          <a href="#"
-            ><img src="{% static 'icons/youtube-symbol 1.svg' %}"alt="youtube-social"
-          /></a>
-        </li>
-      </ul>
-    </footer>
 {% endblock %}

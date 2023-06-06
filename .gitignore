@@ -7,7 +7,7 @@ __pycache__/
 *.cpython-311.pyc
 # C extensions
 *.so
-blog/__pycache__/
+website/__pycache__/
 # Distribution / packaging
 .Python
 build/

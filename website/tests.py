@@ -8,7 +8,7 @@ class TestIndexViews:
     client = Client()
 
     def test_index_rendering(self):
-        url = reverse('blog:index')
+        url = reverse('website:index')
         response = self.client.get(url)
         assert response.status_code == 200
         assert "vini-codex" in response.content.decode("utf-8")

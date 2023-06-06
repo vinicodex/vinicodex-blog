@@ -1,0 +1,29 @@
+{% extends "website/post/../base.html" %}
+
+{% block title %}My Blog{% endblock %}
+
+{% block content %}
+    <header class="main-head">
+      <nav>
+        <div class="logo">
+          <img src="../icons/code.svg" alt="logo" />
+          <h1>Dev Ed</h1>
+        </div>
+        <ul>
+          <li><a href="{% url 'website:index' %}">Home</a></li>
+          <li><a class="{% url 'website:projects' %}">Projects</a></li>
+          <li><a href="{% url 'website:contact' %}">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="projects">
+      <div class="travelly">
+        <h2>Travelly</h2>
+        <img src="../img/travelly.jpg" alt="travelly-project" />
+      </div>
+      <div class="travelly">
+        <h2>Elena Joy</h2>
+        <img src="../img/elena-joy.jpg" alt="elena-project" />
+      </div>
+    </section>
+{% endblock %}
